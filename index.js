@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // array of questions for user
@@ -51,13 +52,16 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+writeToFile = (fileName, data) => {
 }
 
 // function to initialize program
-function init() {
-    return inquirer.prompt(questions);
-    
+init = () => {
+    return inquirer.prompt(questions)
+        .then(responses => {
+            return generateMarkdown(responses);
+        });
+
 }
 
 // function call to initialize program
