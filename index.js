@@ -8,32 +8,73 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'What is your GitHub username?'
+        message: 'What is your GitHub username?',
+        validate: githubNameInput => {
+            if (githubNameInput) {
+              return true;
+            } else {
+              console.log('Please enter your GitHub username!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?'
+        message: 'What is your email address?',
+        validate: emailInput => {
+            if (emailInput) {
+              return true;
+            } else {
+              console.log('Please enter your email address!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project.'
+        message: 'What is the title of your project.',
+        validate: titleInput => {
+            if (titleInput) {
+              return true;
+            } else {
+              console.log('Please enter your project title!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please give a discription of the project.'
+        message: 'Please give a description of the project.',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+              return true;
+            } else {
+              console.log('Please enter a description of your project!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Please give installation instructions for the project.'
+        message: 'Please give installation instructions for the project.',
+        validate: installationInput => {
+            if (installationInput) {
+              return true;
+            } else {
+              console.log('Please give installation instructions for the project!');
+              return false;
+            }
+          }
     },
     {
         type: 'input',
         name: 'usage',
         message: 'Please enter usage information.'
+        
     },
     {
         type: 'list',
@@ -58,6 +99,7 @@ writeToFile = data => {
     fs.writeFile('./dist/README.md', data, err => {
         if (err) throw new Error(err);
     })
+    console.log("README.md has been created.")
 }
 
 // function to initialize program
