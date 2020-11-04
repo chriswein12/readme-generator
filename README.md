@@ -34,6 +34,7 @@ https://github.com/chriswein12/readme-generator
 <br/>
 
 ## How the application works
+Click on the following image for a walkthrough video on Youtube.
 
 [![Link to Walkthrough Video](http://img.youtube.com/vi/uye17XUCnNc/0.jpg)](http://www.youtube.com/watch?v=uye17XUCnNc "README Generator with Node.js")
 
