@@ -15,7 +15,7 @@ npm install inquirer
 ## How it Works
 * The user will start the program with the folling command:
     ```
-    npm install inquirer
+    node index.js
     ```
 * The user will then be asked a series of questions about their github name, email, project title, project description, installation, usage information, contribution information, licenses, and testing.
 * After completing the questions, a README will be generated and placed in the "dist" folder.
@@ -28,7 +28,7 @@ npm install inquirer
   
 <br/>
 
-## Link to GitHub Repo
+## Link to GitHub Repository
 https://github.com/chriswein12/readme-generator
 
 <br/>

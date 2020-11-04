@@ -73,8 +73,15 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Please enter usage information.'
-        
+        message: 'Please enter usage information.',
+        validate: usageInput => {
+            if (usageInput) {
+              return true;
+            } else {
+              console.log('Please give usage information for the project!');
+              return false;
+            }
+        }
     },
     {
         type: 'list',
@@ -85,12 +92,28 @@ const questions = [
     {
         type: 'input',
         name: 'contributing',
-        message: 'Please enter your contribution guidelines.'
+        message: 'Please enter your contribution guidelines.',
+        validate: contributingInput => {
+            if (contributingInput) {
+              return true;
+            } else {
+              console.log('Please give contributing information for the project!');
+              return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'Please give any testing instructions.'
+        message: 'Please give any testing instructions.',
+        validate: testingInput => {
+            if (testingInput) {
+              return true;
+            } else {
+              console.log('Please give testing instructions for the project!');
+              return false;
+            }
+        }
     },
 ];
 
