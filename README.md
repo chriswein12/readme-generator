@@ -35,7 +35,7 @@ https://github.com/chriswein12/readme-generator
 
 ## How the application works
 
-![.gif of full-screen website](./assets/gifs/mobile-screen-cryptocalc.gif)
+[![Link to Walkthrough Video](http://img.youtube.com/vi/uye17XUCnNc/0.jpg)](http://www.youtube.com/watch?v=uye17XUCnNc "README Generator with Node.js")
 
 
 <br/>

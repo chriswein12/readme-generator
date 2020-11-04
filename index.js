@@ -122,14 +122,17 @@ writeToFile = data => {
     fs.writeFile('./dist/README.md', data, err => {
         if (err) throw new Error(err);
     })
-    console.log("README.md has been created.")
+    console.log(`
+    ==========
+    README.md has been created.
+    ==========
+    `)
 }
 
 // function to initialize program
 init = () => {
     return inquirer.prompt(questions)
         .then(responses => {
-            console.log(responses);
             return generateMarkdown(responses);
         }).then(readmePage => {
             return writeToFile(readmePage)
